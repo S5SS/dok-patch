@@ -1,0 +1,597 @@
+using System;
+using System.Collections.Generic;
+using BBI.Core;
+using BBI.Core.Utility.FixedPoint;
+
+namespace BBI.Game.Data
+{
+	// Token: 0x020000E1 RID: 225
+	[Serializable]
+	internal sealed class UnitAttributesData : NamedObjectBase, UnitAttributes, INamed, CostAttributes
+	{
+		// Token: 0x17000332 RID: 818
+		// (get) Token: 0x060003B4 RID: 948 RVA: 0x00003171 File Offset: 0x00001371
+		UnitClass UnitAttributes.Class
+		{
+			get
+			{
+				return this.m_Class;
+			}
+		}
+
+		// Token: 0x17000333 RID: 819
+		// (get) Token: 0x060003B5 RID: 949 RVA: 0x00003179 File Offset: 0x00001379
+		UnitSelectionFlags UnitAttributes.SelectionFlags
+		{
+			get
+			{
+				return this.m_SelectionFlags;
+			}
+		}
+
+		// Token: 0x17000334 RID: 820
+		// (get) Token: 0x060003B6 RID: 950 RVA: 0x00003181 File Offset: 0x00001381
+		NavMeshAttributes UnitAttributes.NavMeshAttributes
+		{
+			get
+			{
+				return this.m_NavMesh;
+			}
+		}
+
+		// Token: 0x17000335 RID: 821
+		// (get) Token: 0x060003B7 RID: 951
+		int UnitAttributes.MaxHealth
+		{
+			get
+			{
+				return this.m_MaxHealth;
+			}
+		}
+
+		// Token: 0x17000336 RID: 822
+		// (get) Token: 0x060003B8 RID: 952 RVA: 0x00003189 File Offset: 0x00001389
+		int UnitAttributes.Armour
+		{
+			get
+			{
+				return this.m_Armour;
+			}
+		}
+
+		// Token: 0x17000337 RID: 823
+		// (get) Token: 0x060003B9 RID: 953 RVA: 0x00003191 File Offset: 0x00001391
+		Fixed64 UnitAttributes.DamageReceivedMultiplier
+		{
+			get
+			{
+				return Fixed64.FromConstFloat(this.m_DamageReceivedMultiplier);
+			}
+		}
+
+		// Token: 0x17000338 RID: 824
+		// (get) Token: 0x060003BA RID: 954 RVA: 0x0000319E File Offset: 0x0000139E
+		Fixed64 UnitAttributes.AccuracyReceivedMultiplier
+		{
+			get
+			{
+				return Fixed64.FromConstFloat(this.m_AccuracyReceivedMultiplier);
+			}
+		}
+
+		// Token: 0x17000339 RID: 825
+		// (get) Token: 0x060003BB RID: 955 RVA: 0x000031AB File Offset: 0x000013AB
+		int CostAttributes.Resource1Cost
+		{
+			get
+			{
+				return this.m_Resource1Cost;
+			}
+		}
+
+		// Token: 0x1700033A RID: 826
+		// (get) Token: 0x060003BC RID: 956 RVA: 0x000031B3 File Offset: 0x000013B3
+		int CostAttributes.Resource2Cost
+		{
+			get
+			{
+				return this.m_Resource2Cost;
+			}
+		}
+
+		// Token: 0x1700033B RID: 827
+		// (get) Token: 0x060003BD RID: 957 RVA: 0x000031BB File Offset: 0x000013BB
+		int UnitAttributes.PopCapCost
+		{
+			get
+			{
+				return this.m_PopCapCost;
+			}
+		}
+
+		// Token: 0x1700033C RID: 828
+		// (get) Token: 0x060003BE RID: 958 RVA: 0x000031C3 File Offset: 0x000013C3
+		int UnitAttributes.ExperienceValue
+		{
+			get
+			{
+				return this.m_ExperienceValue;
+			}
+		}
+
+		// Token: 0x1700033D RID: 829
+		// (get) Token: 0x060003BF RID: 959 RVA: 0x000031CB File Offset: 0x000013CB
+		Fixed64 UnitAttributes.ProductionTime
+		{
+			get
+			{
+				return Fixed64.UnsafeFromFloat(this.m_ProductionTime);
+			}
+		}
+
+		// Token: 0x1700033E RID: 830
+		// (get) Token: 0x060003C0 RID: 960 RVA: 0x000031D8 File Offset: 0x000013D8
+		Fixed64 UnitAttributes.AggroRange
+		{
+			get
+			{
+				return Fixed64.FromInt(this.m_AggroRange);
+			}
+		}
+
+		// Token: 0x1700033F RID: 831
+		// (get) Token: 0x060003C1 RID: 961 RVA: 0x000031E5 File Offset: 0x000013E5
+		Fixed64 UnitAttributes.LeashRange
+		{
+			get
+			{
+				return Fixed64.FromInt(this.m_LeashRange);
+			}
+		}
+
+		// Token: 0x17000340 RID: 832
+		// (get) Token: 0x060003C2 RID: 962 RVA: 0x000031F2 File Offset: 0x000013F2
+		Fixed64 UnitAttributes.AlertRange
+		{
+			get
+			{
+				return Fixed64.FromInt(this.m_AlertRange);
+			}
+		}
+
+		// Token: 0x17000341 RID: 833
+		// (get) Token: 0x060003C3 RID: 963 RVA: 0x000031FF File Offset: 0x000013FF
+		Fixed64 UnitAttributes.RepairPickupRange
+		{
+			get
+			{
+				return Fixed64.FromInt(this.m_RepairPickupRange);
+			}
+		}
+
+		// Token: 0x17000342 RID: 834
+		// (get) Token: 0x060003C4 RID: 964 RVA: 0x0000320C File Offset: 0x0000140C
+		UnitPositionReaggroConditions UnitAttributes.UnitPositionReaggroConditions
+		{
+			get
+			{
+				return this.m_UnitPositionReaggroConditions;
+			}
+		}
+
+		// Token: 0x17000343 RID: 835
+		// (get) Token: 0x060003C5 RID: 965 RVA: 0x00003214 File Offset: 0x00001414
+		LeashPositionReaggroConditions UnitAttributes.LeashPositionReaggroConditions
+		{
+			get
+			{
+				return this.m_LeashPositionReaggroConditions;
+			}
+		}
+
+		// Token: 0x17000344 RID: 836
+		// (get) Token: 0x060003C6 RID: 966 RVA: 0x0000321C File Offset: 0x0000141C
+		int UnitAttributes.LeadPriority
+		{
+			get
+			{
+				return this.m_LeadPriority;
+			}
+		}
+
+		// Token: 0x17000345 RID: 837
+		// (get) Token: 0x060003C7 RID: 967 RVA: 0x00003224 File Offset: 0x00001424
+		bool UnitAttributes.Selectable
+		{
+			get
+			{
+				return this.m_Selectable;
+			}
+		}
+
+		// Token: 0x17000346 RID: 838
+		// (get) Token: 0x060003C8 RID: 968 RVA: 0x0000322C File Offset: 0x0000142C
+		bool UnitAttributes.Controllable
+		{
+			get
+			{
+				return this.m_Controllable;
+			}
+		}
+
+		// Token: 0x17000347 RID: 839
+		// (get) Token: 0x060003C9 RID: 969 RVA: 0x00003234 File Offset: 0x00001434
+		bool UnitAttributes.Targetable
+		{
+			get
+			{
+				return this.m_Targetable;
+			}
+		}
+
+		// Token: 0x17000348 RID: 840
+		// (get) Token: 0x060003CA RID: 970 RVA: 0x0000323C File Offset: 0x0000143C
+		bool UnitAttributes.NonAutoTargetable
+		{
+			get
+			{
+				return this.m_NonAutoTargetable;
+			}
+		}
+
+		// Token: 0x17000349 RID: 841
+		// (get) Token: 0x060003CB RID: 971 RVA: 0x00003244 File Offset: 0x00001444
+		bool UnitAttributes.RetireTargetable
+		{
+			get
+			{
+				return this.m_RetireTargetable;
+			}
+		}
+
+		// Token: 0x1700034A RID: 842
+		// (get) Token: 0x060003CC RID: 972 RVA: 0x0000324C File Offset: 0x0000144C
+		bool UnitAttributes.HackedReturnTargetable
+		{
+			get
+			{
+				return this.m_HackedReturnTargetable;
+			}
+		}
+
+		// Token: 0x1700034B RID: 843
+		// (get) Token: 0x060003CD RID: 973 RVA: 0x00003254 File Offset: 0x00001454
+		HackableProperties UnitAttributes.HackableProperties
+		{
+			get
+			{
+				return this.m_HackableProperties;
+			}
+		}
+
+		// Token: 0x1700034C RID: 844
+		// (get) Token: 0x060003CE RID: 974 RVA: 0x0000325C File Offset: 0x0000145C
+		bool UnitAttributes.ExcludeFromUnitStats
+		{
+			get
+			{
+				return this.m_ExcludeFromUnitStats;
+			}
+		}
+
+		// Token: 0x1700034D RID: 845
+		// (get) Token: 0x060003CF RID: 975 RVA: 0x00003264 File Offset: 0x00001464
+		bool UnitAttributes.BlocksLOF
+		{
+			get
+			{
+				return this.m_BlocksLOF;
+			}
+		}
+
+		// Token: 0x1700034E RID: 846
+		// (get) Token: 0x060003D0 RID: 976 RVA: 0x0000326C File Offset: 0x0000146C
+		Fixed64 UnitAttributes.WorldHeightOffset
+		{
+			get
+			{
+				return Fixed64.UnsafeFromFloat(this.m_WorldHeightOffset);
+			}
+		}
+
+		// Token: 0x1700034F RID: 847
+		// (get) Token: 0x060003D1 RID: 977 RVA: 0x00003279 File Offset: 0x00001479
+		bool UnitAttributes.DoNotPersist
+		{
+			get
+			{
+				return this.m_DoNotPersist;
+			}
+		}
+
+		// Token: 0x17000350 RID: 848
+		// (get) Token: 0x060003D2 RID: 978 RVA: 0x00003281 File Offset: 0x00001481
+		bool UnitAttributes.LevelBound
+		{
+			get
+			{
+				return this.m_LevelBound;
+			}
+		}
+
+		// Token: 0x17000351 RID: 849
+		// (get) Token: 0x060003D3 RID: 979 RVA: 0x00003289 File Offset: 0x00001489
+		bool UnitAttributes.StartsInHangar
+		{
+			get
+			{
+				return this.m_StartsInHangar;
+			}
+		}
+
+		// Token: 0x17000352 RID: 850
+		// (get) Token: 0x060003D4 RID: 980 RVA: 0x00003291 File Offset: 0x00001491
+		Fixed64 UnitAttributes.SensorRadius
+		{
+			get
+			{
+				return Fixed64.UnsafeFromFloat(this.m_SensorRadius);
+			}
+		}
+
+		// Token: 0x17000353 RID: 851
+		// (get) Token: 0x060003D5 RID: 981 RVA: 0x0000329E File Offset: 0x0000149E
+		Fixed64 UnitAttributes.ContactRadius
+		{
+			get
+			{
+				return Fixed64.UnsafeFromFloat(this.m_ContactRadius);
+			}
+		}
+
+		// Token: 0x17000354 RID: 852
+		// (get) Token: 0x060003D6 RID: 982 RVA: 0x000032AB File Offset: 0x000014AB
+		int UnitAttributes.NumProductionQueues
+		{
+			get
+			{
+				return this.m_NumProductionQueues;
+			}
+		}
+
+		// Token: 0x17000355 RID: 853
+		// (get) Token: 0x060003D7 RID: 983 RVA: 0x000032B3 File Offset: 0x000014B3
+		int UnitAttributes.ProductionQueueDepth
+		{
+			get
+			{
+				return this.m_ProductionQueueDepth;
+			}
+		}
+
+		// Token: 0x17000356 RID: 854
+		// (get) Token: 0x060003D8 RID: 984 RVA: 0x000032BB File Offset: 0x000014BB
+		bool UnitAttributes.ShowProductionQueues
+		{
+			get
+			{
+				return this.m_ShowProductionQueues;
+			}
+		}
+
+		// Token: 0x17000357 RID: 855
+		// (get) Token: 0x060003D9 RID: 985 RVA: 0x000032C3 File Offset: 0x000014C3
+		bool UnitAttributes.NoTextNotifications
+		{
+			get
+			{
+				return this.m_NoTextNotifications;
+			}
+		}
+
+		// Token: 0x17000358 RID: 856
+		// (get) Token: 0x060003DA RID: 986 RVA: 0x000032CB File Offset: 0x000014CB
+		UnitNotificationFlags UnitAttributes.NotificationFlags
+		{
+			get
+			{
+				return this.m_NotificationFlags;
+			}
+		}
+
+		// Token: 0x17000359 RID: 857
+		// (get) Token: 0x060003DB RID: 987 RVA: 0x000032D3 File Offset: 0x000014D3
+		int UnitAttributes.FireRateDisplay
+		{
+			get
+			{
+				return (int)this.m_FireRate;
+			}
+		}
+
+		// Token: 0x1700035A RID: 858
+		// (get) Token: 0x060003DC RID: 988 RVA: 0x000032DB File Offset: 0x000014DB
+		WeaponBinding[] UnitAttributes.WeaponLoadout
+		{
+			get
+			{
+				return this.m_WeaponLoadout;
+			}
+		}
+
+		// Token: 0x1700035B RID: 859
+		// (get) Token: 0x060003DD RID: 989 RVA: 0x000032E3 File Offset: 0x000014E3
+		Fixed64 UnitAttributes.PriorityAsTarget
+		{
+			get
+			{
+				return Fixed64.FromConstFloat(this.m_PriorityAsTarget);
+			}
+		}
+
+		// Token: 0x1700035C RID: 860
+		// (get) Token: 0x060003DE RID: 990 RVA: 0x000032F0 File Offset: 0x000014F0
+		ThreatData UnitAttributes.ThreatData
+		{
+			get
+			{
+				return this.m_ThreatData;
+			}
+		}
+
+		// Token: 0x1700035D RID: 861
+		// (get) Token: 0x060003DF RID: 991 RVA: 0x000032F8 File Offset: 0x000014F8
+		IEnumerable<ThreatCounter> UnitAttributes.ThreatCounters
+		{
+			get
+			{
+				return this.m_ThreatCounters;
+			}
+		}
+
+		// Token: 0x1700035E RID: 862
+		// (get) Token: 0x060003E0 RID: 992 RVA: 0x00003300 File Offset: 0x00001500
+		IEnumerable<ThreatCounter> UnitAttributes.ThreatCounteredBys
+		{
+			get
+			{
+				return this.m_ThreatCounteredBys;
+			}
+		}
+
+		// Token: 0x04000352 RID: 850
+		public UnitClass m_Class = UnitClass.Ground;
+
+		// Token: 0x04000353 RID: 851
+		public UnitSelectionFlags m_SelectionFlags = UnitSelectionFlags.CombatUnitSelect;
+
+		// Token: 0x04000354 RID: 852
+		public NavMeshAttributes m_NavMesh;
+
+		// Token: 0x04000355 RID: 853
+		public int m_MaxHealth = 1000;
+
+		// Token: 0x04000356 RID: 854
+		public int m_Armour = 100;
+
+		// Token: 0x04000357 RID: 855
+		public float m_DamageReceivedMultiplier = 1f;
+
+		// Token: 0x04000358 RID: 856
+		public float m_AccuracyReceivedMultiplier = 1f;
+
+		// Token: 0x04000359 RID: 857
+		public int m_Resource1Cost;
+
+		// Token: 0x0400035A RID: 858
+		public int m_Resource2Cost;
+
+		// Token: 0x0400035B RID: 859
+		public int m_PopCapCost = 1;
+
+		// Token: 0x0400035C RID: 860
+		public int m_ExperienceValue;
+
+		// Token: 0x0400035D RID: 861
+		public float m_ProductionTime;
+
+		// Token: 0x0400035E RID: 862
+		public int m_AggroRange = 400;
+
+		// Token: 0x0400035F RID: 863
+		public int m_LeashRange = 400;
+
+		// Token: 0x04000360 RID: 864
+		public int m_AlertRange = 350;
+
+		// Token: 0x04000361 RID: 865
+		public int m_RepairPickupRange = 1000;
+
+		// Token: 0x04000362 RID: 866
+		public UnitPositionReaggroConditions m_UnitPositionReaggroConditions = UnitPositionReaggroConditions.TargetWithinAggroRange;
+
+		// Token: 0x04000363 RID: 867
+		public LeashPositionReaggroConditions m_LeashPositionReaggroConditions;
+
+		// Token: 0x04000364 RID: 868
+		public int m_LeadPriority;
+
+		// Token: 0x04000365 RID: 869
+		public bool m_Selectable = true;
+
+		// Token: 0x04000366 RID: 870
+		public bool m_Controllable = true;
+
+		// Token: 0x04000367 RID: 871
+		public bool m_Targetable = true;
+
+		// Token: 0x04000368 RID: 872
+		public bool m_NonAutoTargetable;
+
+		// Token: 0x04000369 RID: 873
+		public bool m_RetireTargetable;
+
+		// Token: 0x0400036A RID: 874
+		public bool m_HackedReturnTargetable;
+
+		// Token: 0x0400036B RID: 875
+		public HackableProperties m_HackableProperties = HackableProperties.Hackable;
+
+		// Token: 0x0400036C RID: 876
+		public bool m_ExcludeFromUnitStats;
+
+		// Token: 0x0400036D RID: 877
+		public bool m_BlocksLOF;
+
+		// Token: 0x0400036E RID: 878
+		public float m_WorldHeightOffset;
+
+		// Token: 0x0400036F RID: 879
+		public bool m_DoNotPersist;
+
+		// Token: 0x04000370 RID: 880
+		public bool m_LevelBound;
+
+		// Token: 0x04000371 RID: 881
+		public bool m_StartsInHangar;
+
+		// Token: 0x04000372 RID: 882
+		public float m_SensorRadius;
+
+		// Token: 0x04000373 RID: 883
+		public float m_ContactRadius;
+
+		// Token: 0x04000374 RID: 884
+		public int m_NumProductionQueues;
+
+		// Token: 0x04000375 RID: 885
+		public int m_ProductionQueueDepth;
+
+		// Token: 0x04000376 RID: 886
+		public bool m_ShowProductionQueues = true;
+
+		// Token: 0x04000377 RID: 887
+		public bool m_NoTextNotifications;
+
+		// Token: 0x04000378 RID: 888
+		public UnitNotificationFlags m_NotificationFlags;
+
+		// Token: 0x04000379 RID: 889
+		public float m_PriorityAsTarget;
+
+		// Token: 0x0400037A RID: 890
+		public FireRateCategory m_FireRate = FireRateCategory.Low;
+
+		// Token: 0x0400037B RID: 891
+		public WeaponBinding[] m_WeaponLoadout;
+
+		// Token: 0x0400037C RID: 892
+		public ThreatData m_ThreatData;
+
+		// Token: 0x0400037D RID: 893
+		public ThreatCounter[] m_ThreatCounters;
+
+		// Token: 0x0400037E RID: 894
+		public ThreatCounter[] m_ThreatCounteredBys;
+	}
+}

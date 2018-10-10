@@ -1,0 +1,576 @@
+using System;
+using BBI.Core;
+using BBI.Core.Utility.FixedPoint;
+using BBI.Game.Data;
+using BBI.Unity.Core.Data;
+using UnityEngine;
+
+namespace BBI.Unity.Game.Data
+{
+	// Token: 0x020000B1 RID: 177
+	[Serializable]
+	internal sealed class WeaponAttributesData : NamedObjectBase, WeaponAttributes, INamed
+	{
+		// Token: 0x170001F4 RID: 500
+		// (get) Token: 0x060002F7 RID: 759 RVA: 0x0000714A File Offset: 0x0000534A
+		bool WeaponAttributes.ExcludeFromAutoTargetAcquisition
+		{
+			get
+			{
+				return this.m_ExcludeFromAutoTargetAcquisition;
+			}
+		}
+
+		// Token: 0x170001F5 RID: 501
+		// (get) Token: 0x060002F8 RID: 760 RVA: 0x00007152 File Offset: 0x00005352
+		bool WeaponAttributes.ExcludeFromAutoFire
+		{
+			get
+			{
+				return this.m_ExcludeFromAutoFire;
+			}
+		}
+
+		// Token: 0x170001F6 RID: 502
+		// (get) Token: 0x060002F9 RID: 761 RVA: 0x0000715A File Offset: 0x0000535A
+		bool WeaponAttributes.ExcludeFromHeightAdvantage
+		{
+			get
+			{
+				return this.m_ExcludeFromHeightAdvantage;
+			}
+		}
+
+		// Token: 0x170001F7 RID: 503
+		// (get) Token: 0x060002FA RID: 762 RVA: 0x00007162 File Offset: 0x00005362
+		DamageType WeaponAttributes.DamageType
+		{
+			get
+			{
+				return this.m_DamageType;
+			}
+		}
+
+		// Token: 0x170001F8 RID: 504
+		// (get) Token: 0x060002FB RID: 763 RVA: 0x0000716A File Offset: 0x0000536A
+		bool WeaponAttributes.IsTracer
+		{
+			get
+			{
+				return string.IsNullOrEmpty(this.m_ProjectileEntityTypeToSpawn);
+			}
+		}
+
+		// Token: 0x170001F9 RID: 505
+		// (get) Token: 0x060002FC RID: 764 RVA: 0x00007177 File Offset: 0x00005377
+		Fixed64 WeaponAttributes.TracerSpeed
+		{
+			get
+			{
+				return Fixed64.FromConstFloat(this.m_TracerSpeed);
+			}
+		}
+
+		// Token: 0x170001FA RID: 506
+		// (get) Token: 0x060002FD RID: 765 RVA: 0x00007184 File Offset: 0x00005384
+		Fixed64 WeaponAttributes.TracerLength
+		{
+			get
+			{
+				return Fixed64.FromConstFloat(this.m_TracerLength);
+			}
+		}
+
+		// Token: 0x170001FB RID: 507
+		// (get) Token: 0x060002FE RID: 766 RVA: 0x00007191 File Offset: 0x00005391
+		Fixed64 WeaponAttributes.BaseDamagePerRound
+		{
+			get
+			{
+				return Fixed64.FromInt(this.m_BaseDamagePerRound);
+			}
+		}
+
+		// Token: 0x170001FC RID: 508
+		// (get) Token: 0x060002FF RID: 767 RVA: 0x0000719E File Offset: 0x0000539E
+		Fixed64 WeaponAttributes.BaseWreckDamagePerRound
+		{
+			get
+			{
+				return Fixed64.FromInt(this.m_BaseWreckDamagePerRound);
+			}
+		}
+
+		// Token: 0x170001FD RID: 509
+		// (get) Token: 0x06000300 RID: 768 RVA: 0x000071AB File Offset: 0x000053AB
+		float WeaponAttributes.FiringRecoil
+		{
+			get
+			{
+				return this.m_FiringRecoil;
+			}
+		}
+
+		// Token: 0x170001FE RID: 510
+		// (get) Token: 0x06000301 RID: 769 RVA: 0x000071B3 File Offset: 0x000053B3
+		int WeaponAttributes.WindUpTimeMS
+		{
+			get
+			{
+				return this.m_WindUpTime;
+			}
+		}
+
+		// Token: 0x170001FF RID: 511
+		// (get) Token: 0x06000302 RID: 770 RVA: 0x000071BB File Offset: 0x000053BB
+		int WeaponAttributes.RateOfFire
+		{
+			get
+			{
+				return this.m_RateOfFire;
+			}
+		}
+
+		// Token: 0x17000200 RID: 512
+		// (get) Token: 0x06000303 RID: 771 RVA: 0x000071C3 File Offset: 0x000053C3
+		int WeaponAttributes.NumberOfBursts
+		{
+			get
+			{
+				return this.m_NumberOfBursts;
+			}
+		}
+
+		// Token: 0x17000201 RID: 513
+		// (get) Token: 0x06000304 RID: 772 RVA: 0x000071CB File Offset: 0x000053CB
+		int WeaponAttributes.DamagePacketsPerShot
+		{
+			get
+			{
+				return this.m_DamagePacketsPerShot;
+			}
+		}
+
+		// Token: 0x17000202 RID: 514
+		// (get) Token: 0x06000305 RID: 773 RVA: 0x000071D3 File Offset: 0x000053D3
+		int WeaponAttributes.BurstPeriodMinTimeMS
+		{
+			get
+			{
+				return this.m_BurstPeriodMinTime;
+			}
+		}
+
+		// Token: 0x17000203 RID: 515
+		// (get) Token: 0x06000306 RID: 774 RVA: 0x000071DB File Offset: 0x000053DB
+		int WeaponAttributes.BurstPeriodMaxTimeMS
+		{
+			get
+			{
+				return this.m_BurstPeriodMaxTime;
+			}
+		}
+
+		// Token: 0x17000204 RID: 516
+		// (get) Token: 0x06000307 RID: 775 RVA: 0x000071E3 File Offset: 0x000053E3
+		int WeaponAttributes.CooldownTimeMS
+		{
+			get
+			{
+				return this.m_CooldownTime;
+			}
+		}
+
+		// Token: 0x17000205 RID: 517
+		// (get) Token: 0x06000308 RID: 776 RVA: 0x000071EB File Offset: 0x000053EB
+		int WeaponAttributes.WindDownTimeMS
+		{
+			get
+			{
+				return this.m_WindDownTime;
+			}
+		}
+
+		// Token: 0x17000206 RID: 518
+		// (get) Token: 0x06000309 RID: 777 RVA: 0x000071F3 File Offset: 0x000053F3
+		int WeaponAttributes.ReloadTimeMS
+		{
+			get
+			{
+				return this.m_ReloadTime;
+			}
+		}
+
+		// Token: 0x17000207 RID: 519
+		// (get) Token: 0x0600030A RID: 778 RVA: 0x000071FB File Offset: 0x000053FB
+		bool WeaponAttributes.LineOfSightRequired
+		{
+			get
+			{
+				return this.m_LineOfSightRequired;
+			}
+		}
+
+		// Token: 0x17000208 RID: 520
+		// (get) Token: 0x0600030B RID: 779 RVA: 0x00007203 File Offset: 0x00005403
+		TargetAimingType WeaponAttributes.LeadsTarget
+		{
+			get
+			{
+				if (!this.m_LeadsTarget)
+				{
+					return TargetAimingType.DirectAtTarget;
+				}
+				return TargetAimingType.LeadTarget;
+			}
+		}
+
+		// Token: 0x17000209 RID: 521
+		// (get) Token: 0x0600030C RID: 780 RVA: 0x00007210 File Offset: 0x00005410
+		bool WeaponAttributes.KillSkipsUnitDeathSequence
+		{
+			get
+			{
+				return this.m_KillSkipsUnitDeathSequence;
+			}
+		}
+
+		// Token: 0x1700020A RID: 522
+		// (get) Token: 0x0600030D RID: 781 RVA: 0x00007218 File Offset: 0x00005418
+		RevealTrigger WeaponAttributes.RevealTriggers
+		{
+			get
+			{
+				return this.m_RevealTriggers;
+			}
+		}
+
+		// Token: 0x1700020B RID: 523
+		// (get) Token: 0x0600030E RID: 782 RVA: 0x00007220 File Offset: 0x00005420
+		UnitStatusAttackingTrigger WeaponAttributes.UnitStatusAttackingTriggers
+		{
+			get
+			{
+				return this.m_UnitStatusAttackingTriggers;
+			}
+		}
+
+		// Token: 0x1700020C RID: 524
+		// (get) Token: 0x0600030F RID: 783 RVA: 0x00007228 File Offset: 0x00005428
+		WeaponTargetStyle WeaponAttributes.TargetStyle
+		{
+			get
+			{
+				return this.m_TargetStyle;
+			}
+		}
+
+		// Token: 0x1700020D RID: 525
+		// (get) Token: 0x06000310 RID: 784 RVA: 0x00007230 File Offset: 0x00005430
+		WeaponModifierInfo[] WeaponAttributes.Modifiers
+		{
+			get
+			{
+				return this.m_Modifiers;
+			}
+		}
+
+		// Token: 0x1700020E RID: 526
+		// (get) Token: 0x06000311 RID: 785 RVA: 0x00007238 File Offset: 0x00005438
+		TurretAttributes WeaponAttributes.Turret
+		{
+			get
+			{
+				return this.m_Turret;
+			}
+		}
+
+		// Token: 0x1700020F RID: 527
+		// (get) Token: 0x06000312 RID: 786 RVA: 0x00007240 File Offset: 0x00005440
+		RangeBasedWeaponAttributes[] WeaponAttributes.Ranges
+		{
+			get
+			{
+				return this.m_Ranges;
+			}
+		}
+
+		// Token: 0x17000210 RID: 528
+		// (get) Token: 0x06000313 RID: 787 RVA: 0x00007248 File Offset: 0x00005448
+		string WeaponAttributes.ProjectileEntityTypeToSpawn
+		{
+			get
+			{
+				return this.m_ProjectileEntityTypeToSpawn;
+			}
+		}
+
+		// Token: 0x17000211 RID: 529
+		// (get) Token: 0x06000314 RID: 788 RVA: 0x00007250 File Offset: 0x00005450
+		AbilityTargetAlignment WeaponAttributes.StatusEffectsTargetAlignment
+		{
+			get
+			{
+				return this.m_StatusEffectsTargetAlignment;
+			}
+		}
+
+		// Token: 0x17000212 RID: 530
+		// (get) Token: 0x06000315 RID: 789 RVA: 0x00007258 File Offset: 0x00005458
+		UnitClass WeaponAttributes.StatusEffectsExcludeTargetType
+		{
+			get
+			{
+				return this.m_StatusEffectsExcludeTargetType;
+			}
+		}
+
+		// Token: 0x17000213 RID: 531
+		// (get) Token: 0x06000316 RID: 790 RVA: 0x00007260 File Offset: 0x00005460
+		int WeaponAttributes.ActiveStatusEffectsIndex
+		{
+			get
+			{
+				return this.m_StatusEffectsStartingIndex;
+			}
+		}
+
+		// Token: 0x17000214 RID: 532
+		// (get) Token: 0x06000317 RID: 791 RVA: 0x00007268 File Offset: 0x00005468
+		StatusEffectsSetAttributes[] WeaponAttributes.StatusEffectsSets
+		{
+			get
+			{
+				return this.m_StatusEffectsToApplyOnTargets;
+			}
+		}
+
+		// Token: 0x17000215 RID: 533
+		// (get) Token: 0x06000318 RID: 792 RVA: 0x00007270 File Offset: 0x00005470
+		EntityTypeToSpawnAttributes[] WeaponAttributes.EntityTypesToSpawnOnImpact
+		{
+			get
+			{
+				return this.m_EntityTypesToSpawnOnImpact;
+			}
+		}
+
+		// Token: 0x17000216 RID: 534
+		// (get) Token: 0x06000319 RID: 793 RVA: 0x00007278 File Offset: 0x00005478
+		AOEFalloffType WeaponAttributes.AreaOfEffectFalloffType
+		{
+			get
+			{
+				return this.m_AreaOfEffectFalloffType;
+			}
+		}
+
+		// Token: 0x17000217 RID: 535
+		// (get) Token: 0x0600031A RID: 794 RVA: 0x00007280 File Offset: 0x00005480
+		Fixed64 WeaponAttributes.AreaOfEffectRadius
+		{
+			get
+			{
+				return Fixed64.FromConstFloat(this.m_AreaOfEffectMeters);
+			}
+		}
+
+		// Token: 0x17000218 RID: 536
+		// (get) Token: 0x0600031B RID: 795 RVA: 0x0000728D File Offset: 0x0000548D
+		bool WeaponAttributes.ExcludeWeaponOwnerFromAreaOfEffect
+		{
+			get
+			{
+				return this.m_ExcludeWeaponOwnerFromAreaOfEffect;
+			}
+		}
+
+		// Token: 0x17000219 RID: 537
+		// (get) Token: 0x0600031C RID: 796 RVA: 0x00007295 File Offset: 0x00005495
+		Fixed64 WeaponAttributes.FriendlyFireDamageScalar
+		{
+			get
+			{
+				return Fixed64.FromConstFloat(this.m_FriendlyFireDamageScalar);
+			}
+		}
+
+		// Token: 0x1700021A RID: 538
+		// (get) Token: 0x0600031D RID: 797 RVA: 0x000072A2 File Offset: 0x000054A2
+		Fixed64 WeaponAttributes.WeaponOwnerFriendlyFireDamageScalar
+		{
+			get
+			{
+				return Fixed64.FromConstFloat(this.m_WeaponOwnerFriendlyFireDamageScalar);
+			}
+		}
+
+		// Token: 0x1700021B RID: 539
+		// (get) Token: 0x0600031E RID: 798 RVA: 0x000072AF File Offset: 0x000054AF
+		TargetPriorizationAttributes WeaponAttributes.TargetPriorizationAttributes
+		{
+			get
+			{
+				return this.m_TargetPriorization;
+			}
+		}
+
+		// Token: 0x040002CA RID: 714
+		[Tooltip("Whether the weapon should be excluded from automatic target acquisition. Set to true if weapon needs a Player-specified target.")]
+		public bool m_ExcludeFromAutoTargetAcquisition;
+
+		// Token: 0x040002CB RID: 715
+		[Tooltip("Whether the weapon should fire automatically. Set to true if weapon should fire only when triggered by an ability, for example.")]
+		public bool m_ExcludeFromAutoFire;
+
+		// Token: 0x040002CC RID: 716
+		[Tooltip("Whether the weapon should apply height advantage bonuses/penalties.")]
+		public bool m_ExcludeFromHeightAdvantage;
+
+		// Token: 0x040002CD RID: 717
+		[Tooltip("Whether the weapon damages or heals the target it's fired on")]
+		public DamageType m_DamageType;
+
+		// Token: 0x040002CE RID: 718
+		[Tooltip("The base damage per shot, before armour mitigation and other damage reductions")]
+		public int m_BaseDamagePerRound;
+
+		// Token: 0x040002CF RID: 719
+		[Tooltip("The base damage per shot dealt to wrecks. If this number is greater than 0, then the weapon can target wrecks.")]
+		public int m_BaseWreckDamagePerRound;
+
+		// Token: 0x040002D0 RID: 720
+		[Tooltip("Determines if and how the weapon's AOE damage (if any) diminishes based on distance to the center point.")]
+		public AOEFalloffType m_AreaOfEffectFalloffType = AOEFalloffType.Linear;
+
+		// Token: 0x040002D1 RID: 721
+		[Tooltip("The area of effect radius (meters) of the weapon's shot. Targets within the radius receive damage and impact effects")]
+		public float m_AreaOfEffectMeters;
+
+		// Token: 0x040002D2 RID: 722
+		[Tooltip("If true, the weapon owner will not affect itself with the weapon's AOE effects (including damage)")]
+		public bool m_ExcludeWeaponOwnerFromAreaOfEffect;
+
+		// Token: 0x040002D3 RID: 723
+		[Tooltip("The friendly-fire damage multiplier that is applied if this weapon hits friendlies with Damage type shots")]
+		public float m_FriendlyFireDamageScalar = 1f;
+
+		// Token: 0x040002D4 RID: 724
+		[Tooltip("The friendly-fire damage multiplier that is applied if this weapon hits the weapon owner with Damage type shots")]
+		public float m_WeaponOwnerFriendlyFireDamageScalar = 1f;
+
+		// Token: 0x040002D5 RID: 725
+		[Tooltip("The speed at which the tracer moves, if this weapon uses tracers")]
+		public float m_TracerSpeed = 100f;
+
+		// Token: 0x040002D6 RID: 726
+		[Tooltip("The length of the tracer, if this weapon uses tracers instead of projectiles. Used in presentation-only")]
+		public float m_TracerLength = 5f;
+
+		// Token: 0x040002D7 RID: 727
+		[Tooltip("The unit recoils with this force from firing this weapon per shot. Used in presentation-only")]
+		public float m_FiringRecoil;
+
+		// Token: 0x040002D8 RID: 728
+		[Tooltip("Amount of time in milliseconds required for weapon to windup before shooting the first burst of a firing cycle")]
+		public int m_WindUpTime = 1000;
+
+		// Token: 0x040002D9 RID: 729
+		[Tooltip("The number of shots per second, used to determine number of shots fired per burst based on burst duration")]
+		public int m_RateOfFire = 1;
+
+		// Token: 0x040002DA RID: 730
+		[Tooltip("The number of bursts per firing cycle")]
+		public int m_NumberOfBursts = 1;
+
+		// Token: 0x040002DB RID: 731
+		[Tooltip("Number of times damage is applied per shot, each of which is reduced by the target's armour. Effectively an armour multiplier.")]
+		[Range(1f, 10000f)]
+		public int m_DamagePacketsPerShot = 1;
+
+		// Token: 0x040002DC RID: 732
+		[Tooltip("The minimum amount of time in milliseconds when randomizing the duration of a burst")]
+		public int m_BurstPeriodMinTime = 1000;
+
+		// Token: 0x040002DD RID: 733
+		[Tooltip("The maximum amount of time in milliseconds when randomizing the duration of a burst")]
+		public int m_BurstPeriodMaxTime = 1000;
+
+		// Token: 0x040002DE RID: 734
+		[Tooltip("Amount of time in milliseconds required for weapon to cooldown between each burst of a firing cycle")]
+		public int m_CooldownTime = 1000;
+
+		// Token: 0x040002DF RID: 735
+		[Tooltip("Amount of time in milliseconds required for weapon to winddown, used when it has started winding up but never fired, instead of reloading")]
+		public int m_WindDownTime = 500;
+
+		// Token: 0x040002E0 RID: 736
+		[Tooltip("Amount of time in milliseconds required for weapon to reload between each firing cycle")]
+		public int m_ReloadTime = 1000;
+
+		// Token: 0x040002E1 RID: 737
+		[Tooltip("Whether this weapon requires line of sight to fire at targets")]
+		public bool m_LineOfSightRequired = true;
+
+		// Token: 0x040002E2 RID: 738
+		[Tooltip("Whether this weapon leads its target (i.e. shoots ahead predictively) when firing")]
+		public bool m_LeadsTarget = true;
+
+		// Token: 0x040002E3 RID: 739
+		[Tooltip("Whether the targets killed by this weapon skip their death animations and turn into a carcass immediately")]
+		public bool m_KillSkipsUnitDeathSequence;
+
+		// Token: 0x040002E4 RID: 740
+		[Tooltip("At what point the weapon owner is revealed when shooting this weapon (e.g. when a shot is fired, when the projectile arrives, etc.). If none are set, then the weapon owner stays hidden.")]
+		public RevealTrigger m_RevealTriggers = RevealTrigger.OnBurstStart | RevealTrigger.OnBurstEnd | RevealTrigger.OnFireRoundHit | RevealTrigger.OnFireRoundMiss | RevealTrigger.OnReloadStart;
+
+		// Token: 0x040002E5 RID: 741
+		[Tooltip("At what point the weapon owner is considered in 'Attacking' status when shooting this weapon (e.g. when a shot is fired, when the projectile arrives, etc.). If none are set, then the weapon owner will never be in 'Attacking' status.")]
+		public UnitStatusAttackingTrigger m_UnitStatusAttackingTriggers = UnitStatusAttackingTrigger.OnArrival | UnitStatusAttackingTrigger.OnWindUpStart | UnitStatusAttackingTrigger.OnReloadStart;
+
+		// Token: 0x040002E6 RID: 742
+		[Tooltip("Determines how the weapon fires in terms of tracer FX in presentation.")]
+		public WeaponTargetStyle m_TargetStyle = WeaponTargetStyle.TurretImpactRun;
+
+		// Token: 0x040002E7 RID: 743
+		[Tooltip("Modifiers that increase/decrease stats (e.g. accuracy or damage) against certain target types")]
+		public WeaponModifierInfoData[] m_Modifiers;
+
+		// Token: 0x040002E8 RID: 744
+		[Tooltip("Range-based attributes, such as shooting distances and accuracies per range region")]
+		public RangeBasedWeaponAttributesData[] m_Ranges;
+
+		// Token: 0x040002E9 RID: 745
+		[Tooltip("Turret attributes, including field of view, field of fire and turret rotation speed")]
+		public TurretAttributesData m_Turret;
+
+		// Token: 0x040002EA RID: 746
+		[Tooltip("If a projectile is specified, shots fired by this weapon will be fully-simulated entities. Otherwise this weapon will use hitscan tracers")]
+		[ObjectName(typeof(ProjectileAssetContainer))]
+		public string m_ProjectileEntityTypeToSpawn;
+
+		// Token: 0x040002EB RID: 747
+		[Tooltip("Whether the status effects applied on impact affect everyone, just enemies or just allies, etc.")]
+		public AbilityTargetAlignment m_StatusEffectsTargetAlignment;
+
+		// Token: 0x040002EC RID: 748
+		[Tooltip("If target matches any of the defined exclude types then the status effect will not be applied.")]
+		public UnitClass m_StatusEffectsExcludeTargetType;
+
+		// Token: 0x040002ED RID: 749
+		[Tooltip("The initial set of status effects to use in StatusEffectsToApplyOnTargets, which can be buffed to make the weapon apply a different set of status effects")]
+		public int m_StatusEffectsStartingIndex;
+
+		// Token: 0x040002EE RID: 750
+		[Tooltip("Set of status effects to apply on the targets hit by this weapon")]
+		public StatusEffectsSetAttributesData[] m_StatusEffectsToApplyOnTargets;
+
+		// Token: 0x040002EF RID: 751
+		[Tooltip("Entity types to spawn on impact")]
+		public EntityTypeToSpawnAttributesData[] m_EntityTypesToSpawnOnImpact;
+
+		// Token: 0x040002F0 RID: 752
+		[NonSerialized]
+		public TargetPriorizationData m_TargetPriorization;
+	}
+}
