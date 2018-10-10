@@ -77,3 +77,6 @@ bool WeaponAttributes.ExcludeFromHeightAdvantage
 		return this.m_ExcludeFromHeightAdvantage;
 	}
 }
+
+Modding Abilities:
+- same process as above except now the file is BBI.Unity.Game.Data.AbilityAttributesData

@@ -1,0 +1,455 @@
+using System;
+using BBI.Core;
+using BBI.Core.Utility.FixedPoint;
+using BBI.Game.Data;
+using UnityEngine;
+
+namespace BBI.Unity.Game.Data
+{
+	// Token: 0x02000085 RID: 133
+	[Serializable]
+	internal class AbilityAttributesData : NamedObjectBase, AbilityAttributes, INamed
+	{
+		// Token: 0x1700012A RID: 298
+		// (get) Token: 0x06000200 RID: 512 RVA: 0x00006329 File Offset: 0x00004529
+		AbilityClass AbilityAttributes.AbilityType
+		{
+			get
+			{
+				return this.m_AbilityType;
+			}
+		}
+
+		// Token: 0x1700012B RID: 299
+		// (get) Token: 0x06000201 RID: 513 RVA: 0x00006331 File Offset: 0x00004531
+		AbilityTargetingType AbilityAttributes.TargetingType
+		{
+			get
+			{
+				return this.m_TargetingType;
+			}
+		}
+
+		// Token: 0x1700012C RID: 300
+		// (get) Token: 0x06000202 RID: 514 RVA: 0x00006339 File Offset: 0x00004539
+		AbilityTargetAlignment AbilityAttributes.TargetAlignment
+		{
+			get
+			{
+				return this.m_TargetAlignment;
+			}
+		}
+
+		// Token: 0x1700012D RID: 301
+		// (get) Token: 0x06000203 RID: 515 RVA: 0x00006341 File Offset: 0x00004541
+		UnitClass AbilityAttributes.AbilityMapTargetLayers
+		{
+			get
+			{
+				return this.m_AbilityMapTargetLayers;
+			}
+		}
+
+		// Token: 0x1700012E RID: 302
+		// (get) Token: 0x06000204 RID: 516 RVA: 0x00006349 File Offset: 0x00004549
+		GroundAutoTargetAlignmentType AbilityAttributes.GroundAutoTargetAlignment
+		{
+			get
+			{
+				return this.m_GroundAutoTargetAlignment;
+			}
+		}
+
+		// Token: 0x1700012F RID: 303
+		// (get) Token: 0x06000205 RID: 517 RVA: 0x00006351 File Offset: 0x00004551
+		Fixed64 AbilityAttributes.EdgeOfTargetShapeMinDistance
+		{
+			get
+			{
+				return Fixed64.FromConstFloat(this.m_EdgeOfTargetShapeMinDistance);
+			}
+		}
+
+		// Token: 0x17000130 RID: 304
+		// (get) Token: 0x06000206 RID: 518 RVA: 0x0000635E File Offset: 0x0000455E
+		TargetHighlightingAttributes AbilityAttributes.TargetHighlighting
+		{
+			get
+			{
+				return this.m_TargetHighlighting;
+			}
+		}
+
+		// Token: 0x17000131 RID: 305
+		// (get) Token: 0x06000207 RID: 519 RVA: 0x00006366 File Offset: 0x00004566
+		bool AbilityAttributes.CasterMovesToTarget
+		{
+			get
+			{
+				return this.m_CasterMovesToTarget;
+			}
+		}
+
+		// Token: 0x17000132 RID: 306
+		// (get) Token: 0x06000208 RID: 520 RVA: 0x0000636E File Offset: 0x0000456E
+		AbilityGroupActivationType AbilityAttributes.GroupActivationType
+		{
+			get
+			{
+				return this.m_GroupActivationType;
+			}
+		}
+
+		// Token: 0x17000133 RID: 307
+		// (get) Token: 0x06000209 RID: 521 RVA: 0x00006376 File Offset: 0x00004576
+		AbilityRemovedInMode AbilityAttributes.StartsRemovedInGameMode
+		{
+			get
+			{
+				return this.m_StartsRemovedIn;
+			}
+		}
+
+		// Token: 0x17000134 RID: 308
+		// (get) Token: 0x0600020A RID: 522 RVA: 0x0000637E File Offset: 0x0000457E
+		Fixed64 AbilityAttributes.CooldownTimeSecs
+		{
+			get
+			{
+				return Fixed64.FromConstFloat(this.m_CooldownTimeSecs);
+			}
+		}
+
+		// Token: 0x17000135 RID: 309
+		// (get) Token: 0x0600020B RID: 523 RVA: 0x0000638B File Offset: 0x0000458B
+		Fixed64 AbilityAttributes.WarmupTimeSecs
+		{
+			get
+			{
+				return Fixed64.FromConstFloat(this.m_WarmupTimeSecs);
+			}
+		}
+
+		// Token: 0x17000136 RID: 310
+		// (get) Token: 0x0600020C RID: 524 RVA: 0x00006398 File Offset: 0x00004598
+		int AbilityAttributes.SharedCooldownChannel
+		{
+			get
+			{
+				return this.m_SharedCooldownChannel;
+			}
+		}
+
+		// Token: 0x17000137 RID: 311
+		// (get) Token: 0x0600020D RID: 525 RVA: 0x000063A0 File Offset: 0x000045A0
+		SkipCastOnArrivalConditions AbilityAttributes.SkipCastOnArrivalConditions
+		{
+			get
+			{
+				return this.m_SkipCastOnArrivalConditions;
+			}
+		}
+
+		// Token: 0x17000138 RID: 312
+		// (get) Token: 0x0600020E RID: 526 RVA: 0x000063A8 File Offset: 0x000045A8
+		bool AbilityAttributes.IsToggleable
+		{
+			get
+			{
+				return this.m_IsToggleable;
+			}
+		}
+
+		// Token: 0x17000139 RID: 313
+		// (get) Token: 0x0600020F RID: 527 RVA: 0x000063B0 File Offset: 0x000045B0
+		bool AbilityAttributes.CastOnDeath
+		{
+			get
+			{
+				return this.m_CastOnDeath;
+			}
+		}
+
+		// Token: 0x1700013A RID: 314
+		// (get) Token: 0x06000210 RID: 528 RVA: 0x000063B8 File Offset: 0x000045B8
+		CostAttributes AbilityAttributes.Cost
+		{
+			get
+			{
+				return this.m_Cost;
+			}
+		}
+
+		// Token: 0x1700013B RID: 315
+		// (get) Token: 0x06000211 RID: 529 RVA: 0x000063C0 File Offset: 0x000045C0
+		ChargeAttributes AbilityAttributes.Charges
+		{
+			get
+			{
+				return this.m_Charges;
+			}
+		}
+
+		// Token: 0x1700013C RID: 316
+		// (get) Token: 0x06000212 RID: 530 RVA: 0x000063C8 File Offset: 0x000045C8
+		AutocastAttributes AbilityAttributes.Autocast
+		{
+			get
+			{
+				return this.m_Autocast;
+			}
+		}
+
+		// Token: 0x1700013D RID: 317
+		// (get) Token: 0x06000213 RID: 531 RVA: 0x000063D0 File Offset: 0x000045D0
+		ResearchDependenciesAttributes AbilityAttributes.ResearchDependencies
+		{
+			get
+			{
+				return this.m_ResearchDeps;
+			}
+		}
+
+		// Token: 0x1700013E RID: 318
+		// (get) Token: 0x06000214 RID: 532 RVA: 0x000063D8 File Offset: 0x000045D8
+		ActivationDependenciesAttributes AbilityAttributes.ActivationDependencies
+		{
+			get
+			{
+				return this.m_ActivationDependencies;
+			}
+		}
+
+		// Token: 0x1700013F RID: 319
+		// (get) Token: 0x06000215 RID: 533 RVA: 0x000063E0 File Offset: 0x000045E0
+		AutoToggleOffConditionsAttributes AbilityAttributes.AutoToggleOffConditions
+		{
+			get
+			{
+				return this.m_AutoToggleOffConditions;
+			}
+		}
+
+		// Token: 0x17000140 RID: 320
+		// (get) Token: 0x06000216 RID: 534 RVA: 0x000063E8 File Offset: 0x000045E8
+		ChainCastingAttributes AbilityAttributes.ChainCasting
+		{
+			get
+			{
+				return this.m_ChainCasting;
+			}
+		}
+
+		// Token: 0x17000141 RID: 321
+		// (get) Token: 0x06000217 RID: 535 RVA: 0x000063F0 File Offset: 0x000045F0
+		ProduceUnitAttributes AbilityAttributes.ProduceUnit
+		{
+			get
+			{
+				return this.m_ProduceUnit;
+			}
+		}
+
+		// Token: 0x17000142 RID: 322
+		// (get) Token: 0x06000218 RID: 536 RVA: 0x000063F8 File Offset: 0x000045F8
+		UseWeaponAttributes AbilityAttributes.UseWeapon
+		{
+			get
+			{
+				return this.m_UseWeapon;
+			}
+		}
+
+		// Token: 0x17000143 RID: 323
+		// (get) Token: 0x06000219 RID: 537 RVA: 0x00006400 File Offset: 0x00004600
+		ChangeContextAttributes AbilityAttributes.ChangeContext
+		{
+			get
+			{
+				return this.m_ChangeContext;
+			}
+		}
+
+		// Token: 0x17000144 RID: 324
+		// (get) Token: 0x0600021A RID: 538 RVA: 0x00006408 File Offset: 0x00004608
+		SalvageAttributes AbilityAttributes.Salvage
+		{
+			get
+			{
+				return this.m_Salvage;
+			}
+		}
+
+		// Token: 0x17000145 RID: 325
+		// (get) Token: 0x0600021B RID: 539 RVA: 0x00006410 File Offset: 0x00004610
+		AirSortieAttributes AbilityAttributes.AirSortie
+		{
+			get
+			{
+				return this.m_AirSortie;
+			}
+		}
+
+		// Token: 0x17000146 RID: 326
+		// (get) Token: 0x0600021C RID: 540 RVA: 0x00006418 File Offset: 0x00004618
+		ApplyStatusEffectAttributes AbilityAttributes.ApplyStatusEffect
+		{
+			get
+			{
+				return this.m_ApplyStatusEffect;
+			}
+		}
+
+		// Token: 0x17000147 RID: 327
+		// (get) Token: 0x0600021D RID: 541 RVA: 0x00006420 File Offset: 0x00004620
+		RepairAttributes AbilityAttributes.Repair
+		{
+			get
+			{
+				return this.m_Repair;
+			}
+		}
+
+		// Token: 0x17000148 RID: 328
+		// (get) Token: 0x0600021E RID: 542 RVA: 0x00006428 File Offset: 0x00004628
+		SelfDestructAttributes AbilityAttributes.SelfDestruct
+		{
+			get
+			{
+				return this.m_SelfDestruct;
+			}
+		}
+
+		// Token: 0x17000149 RID: 329
+		// (get) Token: 0x0600021F RID: 543 RVA: 0x00006430 File Offset: 0x00004630
+		ModifyInventoryAttributes AbilityAttributes.ModifyInventory
+		{
+			get
+			{
+				return this.m_ModifyInventory;
+			}
+		}
+
+		// Token: 0x040001C9 RID: 457
+		[Tooltip("The category type this ability belongs to. Determines how ability is validated and run.")]
+		[Header("Common Ability Attributes")]
+		public AbilityClass m_AbilityType;
+
+		// Token: 0x040001CA RID: 458
+		[Tooltip("Whether the ability is cast on the caster or a specified target")]
+		public AbilityTargetingType m_TargetingType = AbilityTargetingType.Self;
+
+		// Token: 0x040001CB RID: 459
+		[Tooltip("Whether the ability can be used on friendly and/or enemy targets")]
+		public AbilityTargetAlignment m_TargetAlignment = AbilityTargetAlignment.Friend;
+
+		// Token: 0x040001CC RID: 460
+		[Tooltip("The map pathfinding layers that the ability can be cast on when targeting a ground position")]
+		public UnitClass m_AbilityMapTargetLayers = UnitClass.Ground;
+
+		// Token: 0x040001CD RID: 461
+		[Tooltip("Auto-adjustment of target point when using a ground-targeting ability on an entity")]
+		public GroundAutoTargetAlignmentType m_GroundAutoTargetAlignment;
+
+		// Token: 0x040001CE RID: 462
+		[Tooltip("Minimum targetable distance away from target's shape if selected the EdgeOfTargetShape option from GroundAutoTargetAlignment")]
+		public float m_EdgeOfTargetShapeMinDistance = 50f;
+
+		// Token: 0x040001CF RID: 463
+		[Tooltip("Entity types to highlight when in process of targeting the ability")]
+		public TargetHighlightingAttributesData m_TargetHighlighting;
+
+		// Token: 0x040001D0 RID: 464
+		[Tooltip("Whether the ability requires the caster to move towards the target when targeting a ground position. If true, the caster's pathfinding layers are considered.")]
+		public bool m_CasterMovesToTarget;
+
+		// Token: 0x040001D1 RID: 465
+		[Tooltip("Whether ability is activated simultaneously on all selected units that have the ability")]
+		public AbilityGroupActivationType m_GroupActivationType = AbilityGroupActivationType.GroupUse;
+
+		// Token: 0x040001D2 RID: 466
+		[Tooltip("Prevents the ability from being available on units depending on the game mode unless made available during run-time through scripts or Commander's starting granted abilities")]
+		public AbilityRemovedInMode m_StartsRemovedIn;
+
+		// Token: 0x040001D3 RID: 467
+		[Tooltip("The amount of time in seconds for the ability to be re-usable again after activation")]
+		[Space(10f)]
+		public float m_CooldownTimeSecs;
+
+		// Token: 0x040001D4 RID: 468
+		[Tooltip("The amount of time in seconds before the ability can be cast after meeting all other activation requirements")]
+		public float m_WarmupTimeSecs;
+
+		// Token: 0x040001D5 RID: 469
+		[Tooltip("When an ability is put into cooldown, all other abilities in the same channel will also go into cooldown for the same duration. Use 0 for no channel.")]
+		public int m_SharedCooldownChannel;
+
+		// Token: 0x040001D6 RID: 470
+		[Space(10f)]
+		[Tooltip("If set to None, the caster will wait for the ability to be castable at the ability goal waypoint before moving on. Otherwise the caster will skip the ability if it fails to cast for the given condition upon arriving at the waypoint.")]
+		public SkipCastOnArrivalConditions m_SkipCastOnArrivalConditions;
+
+		// Token: 0x040001D7 RID: 471
+		[Tooltip("Determines whether ability can be toggled on/off")]
+		public bool m_IsToggleable;
+
+		// Token: 0x040001D8 RID: 472
+		[Tooltip("Determines whether ability will attempt to cast when the owning unit dies. Only supports ground target abilities!")]
+		public bool m_CastOnDeath;
+
+		// Token: 0x040001D9 RID: 473
+		[Tooltip("Cost of activating the ability in resources")]
+		public CostAttributesData m_Cost;
+
+		// Token: 0x040001DA RID: 474
+		[Tooltip("Cost of activating the ability in charges")]
+		public ChargeAttributesData m_Charges;
+
+		// Token: 0x040001DB RID: 475
+		[Tooltip("Autocast settings")]
+		public AutocastAttributesData m_Autocast;
+
+		// Token: 0x040001DC RID: 476
+		[Tooltip("Research required before ability is usable")]
+		public ResearchDependenciesAttributesData m_ResearchDeps;
+
+		// Token: 0x040001DD RID: 477
+		[Tooltip("Additional requirements that must be met before ability can activate")]
+		public ActivationDependenciesAttributesData m_ActivationDependencies;
+
+		// Token: 0x040001DE RID: 478
+		[Tooltip("Conditions that, if met, will automatically toggle off a currently toggled-on ability, or deactivate a a currently activated passive ability. Abilities will not automatically toggle off if no flags are selected.")]
+		public AutoToggleOffConditionsAttributesData m_AutoToggleOffConditions;
+
+		// Token: 0x040001DF RID: 479
+		public ChainCastingAttributesData m_ChainCasting;
+
+		// Token: 0x040001E0 RID: 480
+		[Header("Specific Ability Attributes")]
+		public ProduceUnitAttributesData m_ProduceUnit;
+
+		// Token: 0x040001E1 RID: 481
+		public UseWeaponAttributesData m_UseWeapon;
+
+		// Token: 0x040001E2 RID: 482
+		public ChangeContextAttributesData m_ChangeContext;
+
+		// Token: 0x040001E3 RID: 483
+		public AirSortieAttributesData m_AirSortie;
+
+		// Token: 0x040001E4 RID: 484
+		public SalvageAttributesData m_Salvage;
+
+		// Token: 0x040001E5 RID: 485
+		public ApplyStatusEffectAttributesData m_ApplyStatusEffect;
+
+		// Token: 0x040001E6 RID: 486
+		public RepairAttributesData m_Repair;
+
+		// Token: 0x040001E7 RID: 487
+		public SelfDestructAttributesData m_SelfDestruct;
+
+		// Token: 0x040001E8 RID: 488
+		public ModifyInventoryAttributesData m_ModifyInventory;
+	}
+}
