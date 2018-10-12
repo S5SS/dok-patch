@@ -1,0 +1,1 @@
+Note: banned in tournaments
