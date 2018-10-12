@@ -1,0 +1,1 @@
+NIS = Non-Interactive Sequence
