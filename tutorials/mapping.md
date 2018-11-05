@@ -14,7 +14,7 @@ The layout of maps are stored in XML, this is the XML for Khashar Approach:
 	
 	<spawns>
 		<!-- team 1 -->
-		<spawn team="0" index="0" x="-3032" z="2622" angle="90"/>
+		<spawn team="0" index="0" x="-3032" z="2622" angle="0"/>
 		<spawn team="0" index="1" x="-4688" z="1344" angle="0"/>
 		<spawn team="0" index="2" x="-6836" z="-2852" angle="0"/>
 		<!-- team 2 -->
@@ -107,7 +107,7 @@ map | map string ID | (does nothing as of now)
 description | description of the map | (does nothing as of now)
 authors | list of the map authors | (does nothing as of now)
 players | max players for this map | (does nothing as of now)
-spawn | represents a spawn point | `index` is the player index within a team which means the pair (`team`, `index`) must be unique, 
+spawn | represents a spawn point | `index` is the player index within a team which means the pair (`team`, `index`) must be unique, angle does nothing as of now
 resource | represents both CU and RU points | `type` represents CU (=0) or RU (=1), `amount` is the amount of that resource and `collectors` is the max number of collectors that can mine at once
 artifact | represents an artifact | you can have as many or few artifacts as you want, not just 3
 ez | represents an extraction zone | only 1 per team is possible
@@ -133,7 +133,7 @@ The problem now is how do you know what coordinates to give objects? Doing this 
 		<spawn team="0" index="1" x="0" z="0" angle="0"/>
 		<spawn team="0" index="2" x="0" z="0" angle="0"/>
 		<!-- team 2 -->
-		<spawn team="1" index="0" x="0" z="0" angle="90"/>
+		<spawn team="1" index="0" x="0" z="0" angle="0"/>
 		<spawn team="1" index="1" x="0" z="0" angle="0"/>
 		<spawn team="1" index="2" x="0" z="0" angle="0"/>
 	</spawns>
@@ -146,8 +146,12 @@ The problem now is how do you know what coordinates to give objects? Doing this 
 </dokmap>
 ```
 
-Start the map and take a picture looking straight down from as far as possible. This layout will allow you to find the origin, orientation and scale of the map in the image you just took. Its possible that the map isn't centered on (0, 0) and some of these points may be off the map/non existant. If that happens just play around with the values until everything is on the map.
+Start the map and take a picture looking straight down from as far as possible. This layout will allow you to find the origin, orientation and scale of the map in the image you just took. Its possible that the map isn't centered on (0, 0) and some of these artifacts may be off the map/non-existent. If that happens just play around with the values until everything is on the map.
 
 ![Layout planning example](layout-planning.png)
 
-Next step is to plan the layout. First draw some axis onto the map to make things easier. 
+Next step is to plan the layout. First draw some axis onto the map to make things easier, then draw the locations you want everything to be in. The above image doesn't use any artifacts since I used spawn locations instead because this build did not have artifacts yet however artifacts are the way to go since they don't move.
+
+The final step is to use the image to calculate the coordinates for all the objects. To do this use the measuring tool in an image editing program (you need something a little more advanced than paint.exe, GIMP is free and lets you do this quite easily). The measuring tool will most likely use pixels as distance so you need to change the measuring tool to measure in a different unit and set the unit so that the distances you measure are equal to in-game units. (In GIMP measure the distance from the origin to the `<artifact x="0" z="8000"/>` artifact in pixels. Go to `Image->Print Size...`. Set pixels per inch to be `[number of pixels] / 8000` since 8000 is the distance from the origin to this artifact. Then finally change the unit in the bottom left of the image editor to be inches).
+
+The measuring tool should show the x and y distances as well as the direct distance. Use the x and y distances (x->x, y->z) with the help of the axes if it doesn't show negative distances to work out the coordinates. Measure from the origin of the map (e.i. where the axes cross).
