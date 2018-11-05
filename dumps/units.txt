@@ -1,0 +1,47 @@
+C_ArtilleryCruiser_UnitAttributesAsset_MP
+C_Baserunner_UnitAttributesAsset_MP
+C_Battlecruiser_UnitAttributesAsset_MP
+C_Bomber_UnitAttributesAsset_MP
+C_Carrier_UnitAttributesAsset_MP
+C_Escort_UnitAttributesAsset_MP              (LAV)
+C_GunShip_UnitAttributesAsset_MP
+C_HAC_UnitAttributesAsset_MP                 (AAV)
+C_HAC_Upgrade01_UnitAttributesAsset_MP       (Missile Battery)
+C_Harvester_UnitAttributesAsset_MP
+C_Interceptor_UnitAttributesAsset_MP
+C_PopcapScanner_UnitAttributesAsset          (Logistics Module)
+C_Probe_UnitAttributesAsset_MP
+C_Railgun_UnitAttributesAsset_MP
+C_Sob_AssaultCruiser_UnitAttributesAsset_MP
+C_Sob_Baserunner_UnitAttributesAsset_MP
+C_Sob_Battlecruiser_UnitAttributesAsset_MP
+C_Sob_Carrier_UnitAttributesAsset_MP
+C_Sob_Escort_UnitAttributesAsset_MP          (LAV)
+C_Sob_PopcapScanner_UnitAttributesAsset      (Armed Logistics Module)
+C_Sob_Railgun_UnitAttributesAsset_MP
+C_Sob_SupportCruiser_UnitAttributesAsset_MP
+C_SupportCruiser_UnitAttributesAsset_MP
+G_ArtilleryCruiser_UnitAttributesAsset_MP
+G_Baserunner_UnitAttributesAsset_MP
+G_Battlecruiser_UnitAttributesAsset_MP       (Assault Cruiser)
+G_Bomber_UnitAttributesAsset_MP
+G_Carrier_UnitAttributesAsset_MP
+G_Catamaran_UnitAttributesAsset_MP           (Assault Ship)
+G_Catamaran_Upgrade01_UnitAttributesAsset_MP (Missile Ship)
+G_Harvester_UnitAttributesAsset_MP
+G_HonorGuard_UnitAttributesAsset_MP
+G_Interceptor_UnitAttributesAsset_MP
+G_SandSkimmer_UnitAttributesAsset_MP
+G_Scanner_UnitAttributesAsset_MP
+G_StarHull_UnitAttributesAsset_MP            (Heavy Railgun)
+G_StarHull_Upgrade01_UnitAttributesAsset_MP  (Assault Railgun)
+G_SupportCruiser_UnitAttributesAsset_MP
+K_ArtilleryCruiser_UnitAttributesAsset_MP
+K_Baserunner_UnitAttributesAsset_MP
+K_Carrier_UnitAttributesAsset_MP
+K_ExplodingSkimmer_UnitAttributesAsset_MP    (Blast Drone)
+K_SupportCruiser_UnitAttributesAsset_MP
+N_DemoCharge_UnitAttributesAsset_MP
+N_ECMField_UnitAttributesAsset               (Targeting Jammer)
+N_Gun_Turret_UnitAttributesAsset_MP
+N_Missle_Turret_UnitAttributesAsset_MP
