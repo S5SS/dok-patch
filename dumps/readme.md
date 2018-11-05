@@ -1,8 +1,10 @@
 # Dumps of Useful In Game Name
 
 ## [Level Names](lvl-names.txt)
-`STRING ID = LOCALIZATION NAME         = GAMEMODE     = INTEGER ID`
-`M01       = ID_UI_FE_MAP_M01_NAME_193 = singleplayer = 1`
+```
+STRING ID = LOCALIZATION NAME         = GAMEMODE     = INTEGER ID
+M01       = ID_UI_FE_MAP_M01_NAME_193 = singleplayer = 1
+```
 IDs are unique to the gamemode.
 
 ## [Abilities](abilities.txt)
