@@ -1,0 +1,44 @@
+using System;
+using BBI.Game.Data;
+using UnityEngine;
+
+namespace BBI.Unity.Game.Data
+{
+	// Token: 0x02000090 RID: 144
+	[Serializable]
+	internal sealed class ProduceUnitAttributesData : ProduceUnitAttributes
+	{
+		// Token: 0x1700015C RID: 348
+		// (get) Token: 0x06000267 RID: 615
+		string ProduceUnitAttributes.UnitTypeToProduce
+		{
+			get
+			{
+				// Replaces skimmer build option with the Assault Cruiser
+				if (this.m_UnitTypeToProduce == "G_SandSkimmer_MP")
+				{
+					return "G_Battlecruiser_MP";
+				}
+				return this.m_UnitTypeToProduce;
+			}
+		}
+
+		// Token: 0x1700015D RID: 349
+		// (get) Token: 0x06000268 RID: 616 RVA: 0x0000371D File Offset: 0x0000191D
+		bool ProduceUnitAttributes.BypassQueue
+		{
+			get
+			{
+				return this.m_BypassQueue;
+			}
+		}
+
+		// Token: 0x0400021D RID: 541
+		[SerializeField]
+		private string m_UnitTypeToProduce;
+
+		// Token: 0x0400021E RID: 542
+		[SerializeField]
+		private bool m_BypassQueue;
+	}
+}
