@@ -5,7 +5,7 @@
 STRING ID = LOCALIZATION NAME         = GAMEMODE     = INTEGER ID
 M01       = ID_UI_FE_MAP_M01_NAME_193 = singleplayer = 1
 ```
-IDs are unique to the gamemode.
+Integer IDs are unique to the gamemode.
 
 ## [Abilities](abilities.txt)
 The text IDs for all/most of the abilities in game
