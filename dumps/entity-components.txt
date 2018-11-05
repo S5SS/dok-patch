@@ -1,23 +1,23 @@
 1 = Tags
 2 = Unit
-3
+3 = ???
 4 = Targets
 5 = OwningCommander
-6
+6 = ???
 7 = Health
-8
+8 = ???
 9 = Death
 10 = Position
 11 = Resource
 12 = Maneuvering
-13
+13 = ???
 14 = TriggerVolume
 15 = Production
 16 = Harvester
-17
+17 = ???
 18 = Storage
 19 = EntityGoalsCollection
-20
+20 = ???
 21 = Detectable
 22 = PowerShunt
 23 = UnitHangar
@@ -32,6 +32,7 @@
 32 = AirSortie
 33 = Shape
 34 = ReversePolarity
-35
+35 = ???
 36 = Collectible
 37 = Wreck
+...
