@@ -18,7 +18,7 @@ The layout of maps are stored in XML, this is the XML for Khashar Approach:
 		<spawn team="0" index="1" x="-4688" z="1344" angle="0"/>
 		<spawn team="0" index="2" x="-6836" z="-2852" angle="0"/>
 		<!-- team 2 -->
-		<spawn team="1" index="0" x="4278" z="-2819" angle="90"/>
+		<spawn team="1" index="0" x="4278" z="-2819" angle="0"/>
 		<spawn team="1" index="1" x="2655" z="-4245" angle="0"/>
 		<spawn team="1" index="2" x="573" z="-6737" angle="0"/>
 	</spawns>
@@ -102,11 +102,11 @@ The layout of maps are stored in XML, this is the XML for Khashar Approach:
 
 Node Name | Description | Notes
 ---|---|---
-name | name of the map (does nothing as of now) |
-map | map string ID (does nothing as of now) |
-description | description of the map (does nothing as of now) |
-authors | list of the map authors (does nothing as of now) |
-players | max players for this map (does nothing as of now) |
+name | name of the map | (does nothing as of now)
+map | map string ID | (does nothing as of now)
+description | description of the map | (does nothing as of now)
+authors | list of the map authors | (does nothing as of now)
+players | max players for this map | (does nothing as of now)
 spawn | represents a spawn point | `index` is the player index within a team which means the pair (`team`, `index`) must be unique, 
 resource | represents both CU and RU points | `type` represents CU (=0) or RU (=1), `amount` is the amount of that resource and `collectors` is the max number of collectors that can mine at once
 artifact | represents an artifact | you can have as many or few artifacts as you want, not just 3
@@ -129,7 +129,7 @@ The problem now is how do you know what coordinates to give objects? Doing this 
 	
 	<spawns>
 		<!-- team 1 -->
-		<spawn team="0" index="0" x="0" z="0" angle="90"/>
+		<spawn team="0" index="0" x="0" z="0" angle="0"/>
 		<spawn team="0" index="1" x="0" z="0" angle="0"/>
 		<spawn team="0" index="2" x="0" z="0" angle="0"/>
 		<!-- team 2 -->
