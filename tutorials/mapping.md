@@ -1,7 +1,7 @@
 # Deserts of Kharak Mapping Tutorial
 In order to create custom maps you need the More Maps mod. Find the install directory of DoK `(Steam Client->Library->Right Click Deserts of Kharak->Properties...->Local Files->Browse Local Files)`. Then goto `Data/Managed/maps` (location for easy manual installation) where you should see a bunch of `.dokmap` files. To create the map mod modify the map file that belongs to the map you want to change. After each change to the file you only need to restart the level, you don't have to restart the whole game.
 
-## Map format
+## Map Layout Format
 The layout of maps are stored in XML, this is the XML for Khashar Approach:
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -147,3 +147,7 @@ The problem now is how do you know what coordinates to give objects? Doing this 
 ```
 
 Start the map and take a picture looking straight down from as far as possible. This layout will allow you to find the origin, orientation and scale of the map in the image you just took. Its possible that the map isn't centered on (0, 0) and some of these points may be off the map/non existant. If that happens just play around with the values until everything is on the map.
+
+![Layout planning example](layout-planning.png)
+
+Next step is to plan the layout. First draw some axis onto the map to make things easier. 
