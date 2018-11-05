@@ -301,4 +301,3 @@ Ability_Produce_K_MissileShip
 Ability_Produce_K_Sandskimmer
 Ability_S_Nitrous_MP
 Ability_Veterancy
-abilites.txt
