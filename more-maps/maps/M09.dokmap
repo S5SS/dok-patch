@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap>
+	<!-- the following 5 dont do anything atm -->
+	<name>Whispering Gallery [6]</name>
+	<map>M09</map>
+	<description>Grand Canyon Map</description>
+	<authors>Begil</authors>
+	<players>6</players>
+	
+	<spawns>
+		<!-- team 1 -->
+		<spawn team="0" index="0" x="8000" z="2000" angle="0"/>
+		<spawn team="0" index="1" x="8500" z="-3500" angle="0"/>
+		<spawn team="0" index="2" x="6000" z="-5000" angle="0"/>
+		<!-- team 2 -->
+		<spawn team="1" index="0" x="-5000" z="4000" angle="0"/>
+		<spawn team="1" index="1" x="-7000" z="1000" angle="0"/>
+		<spawn team="1" index="2" x="-5000" z="-2500" angle="0"/>
+	</spawns>
+	
+	<resources>
+		<!-- type 0 = cus, type 1 = rus -->
+    
+		<!-- Team 1 -->
+      <!-- Player 1 -->
+	<resource x="8200" z="1900" type="0" amount="7500" collectors="2"/>
+    <resource x="8200" z="2000" type="1" amount="3000" collectors="2"/>
+    <resource x="8200" z="2100" type="0" amount="7500" collectors="2"/>
+
+      <resource x="7525" z="3500" type="0" amount="10500" collectors="2"/>
+      <resource x="7500" z="3400" type="1" amount="4000" collectors="2"/>
+
+      <resource x="4525" z="1500" type="0" amount="10500" collectors="2"/>
+      <resource x="4500" z="1600" type="1" amount="4000" collectors="2"/>
+    
+      <!-- Player 2 -->
+    <resource x="8700" z="-3500" type="0" amount="7500" collectors="2"/>
+    <resource x="8700" z="-3500" type="1" amount="3000" collectors="2"/>
+    <resource x="8700" z="-3600" type="0" amount="7500" collectors="2"/>
+
+      <resource x="8010" z="-4000" type="0" amount="10500" collectors="2"/>
+      <resource x="8000" z="-4100" type="1" amount="4000" collectors="2"/>
+
+      <resource x="5900" z="-1500" type="0" amount="10500" collectors="2"/>
+      <resource x="6000" z="-1515" type="1" amount="4000" collectors="2"/>      
+
+      <!-- Player 3 -->
+    <resource x="6200" z="-4900" type="0" amount="7500" collectors="2"/>
+    <resource x="6200" z="-5000" type="1" amount="3000" collectors="2"/>
+    <resource x="6200" z="-5100" type="0" amount="7500" collectors="2"/>
+
+      <resource x="4025" z="-4000" type="0" amount="10500" collectors="2"/>
+      <resource x="4000" z="-4100" type="1" amount="4000" collectors="2"/>
+
+      <resource x="5000" z="-6500" type="0" amount="10500" collectors="2"/>
+      <resource x="5025" z="-6600" type="1" amount="4000" collectors="2"/>
+
+    <!-- Team 2 -->
+      <!-- Player 4 -->
+    <resource x="-5200" z="3900" type="0" amount="7500" collectors="2"/>
+    <resource x="-5200" z="4000" type="1" amount="3000" collectors="2"/>
+    <resource x="-5200" z="4100" type="0" amount="7500" collectors="2"/>
+
+      <resource x="-3700" z="1700" type="0" amount="10500" collectors="2"/>
+      <resource x="-3725" z="1800" type="1" amount="4000" collectors="2"/>
+
+      <resource x="-4000" z="6000" type="0" amount="10500" collectors="2"/>
+      <resource x="-4025" z="6100" type="1" amount="4000" collectors="2"/>
+
+      <!-- Player 5 -->
+    <resource x="-7200" z="900" type="0" amount="7500" collectors="2"/>
+    <resource x="-7200" z="1000" type="1" amount="3000" collectors="2"/>
+    <resource x="-7200" z="1100" type="0" amount="7500" collectors="2"/>
+
+      <resource x="-8000" z="2000" type="0" amount="10500" collectors="2"/>
+      <resource x="-8025" z="2100" type="1" amount="4000" collectors="2"/>
+
+      <resource x="-5000" z="0" type="0" amount="10500" collectors="2"/>
+      <resource x="-5100" z="25" type="1" amount="4000" collectors="2"/>
+
+    <!-- Player 6 -->
+    <resource x="-5200" z="-2400" type="0" amount="7500" collectors="2"/>
+    <resource x="-5200" z="-2500" type="1" amount="3000" collectors="2"/>
+    <resource x="-5200" z="-2600" type="0" amount="7500" collectors="2"/>
+
+      <resource x="-2000" z="-2200" type="0" amount="10500" collectors="2"/>
+      <resource x="-2025" z="-2300" type="1" amount="4000" collectors="2"/>
+
+      <resource x="-6525" z="-3000" type="0" amount="10500" collectors="2"/>
+      <resource x="-6500" z="-3100" type="1" amount="4000" collectors="2"/>
+
+  </resources>
+	
+	<artifacts>
+		<artifact x="0000" z="-350"/>
+    <artifact x="1000" z="-750"/>
+    <artifact x="2000" z="-1250"/>
+	</artifacts>
+	
+	<ezs>
+		<!-- extraction zones -->
+		<!-- only tested 1 per team but the code suggests you can only have 1 at a time -->
+		<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
+		<ez team="0" x="1500" z="5000" radius="750"/>
+		<ez team="1" x="-1750" z="-5200" radius="750"/>
+	</ezs>
+	
+</dokmap>
+ 

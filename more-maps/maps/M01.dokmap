@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap>
+	<!-- the following 5 dont do anything atm -->
+	<name>Epsilon Base [2]</name>
+	<map>M01</map>
+	<description>Very close range 1v1 map</description>
+	<authors>SSSS</authors>
+	<players>6</players>
+	
+	<!--  -->
+	<heat>30</heat>
+	
+	<spawns>
+		<!-- team 1 -->
+		<spawn team="0" index="0" x="-840" z="2470" angle="0"/>
+		<spawn team="0" index="1" x="-840" z="2470" angle="0"/>
+		<spawn team="0" index="2" x="-840" z="2470" angle="0"/>
+		<!-- team 2 -->
+		<spawn team="1" index="0" x="1600" z="720" angle="0"/>
+		<spawn team="1" index="1" x="1600" z="720" angle="0"/>
+		<spawn team="1" index="2" x="1600" z="720" angle="0"/>
+	</spawns>
+	
+	<resources>
+		<!-- type 0 = cus, type 1 = rus -->
+		<!-- team 1 -->
+		<resource x="-540" z="2620" type="0" amount="7500" collectors="2"/>
+		<resource x="-540" z="2470" type="1" amount="3000" collectors="2"/>
+		<resource x="-540" z="2320" type="0" amount="7500" collectors="2"/>
+		
+		<resource x="-1140" z="2445" type="1" amount="4000" collectors="2"/>
+		<resource x="-1140" z="2295" type="0" amount="10500" collectors="2"/>
+		
+		
+		<!-- team 2 -->
+		<resource x="1750" z="1020" type="0" amount="7500" collectors="2"/>
+		<resource x="1600" z="1020" type="1" amount="3000" collectors="2"/>
+		<resource x="1450" z="1020" type="0" amount="7500" collectors="2"/>
+		
+		<resource x="1675" z="420" type="1" amount="4000" collectors="2"/>
+		<resource x="1525" z="420" type="0" amount="10500" collectors="2"/>
+	</resources>
+	
+	<artifacts>
+		<artifact x="900" z="2700"/>
+		<artifact x="1150" z="2525"/>
+	</artifacts>
+	
+	<ezs>
+		<!-- extraction zones -->
+		<!-- only tested 1 per team but the code suggests you can only have 1 at a time -->
+		<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
+		<ez team="0" x="-175" z="920" radius="250"/>
+		<ez team="1" x="-175" z="920" radius="250"/>
+	</ezs>
+	
+</dokmap>

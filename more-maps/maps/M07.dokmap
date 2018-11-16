@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap>
+	<!-- the following 5 dont do anything atm -->
+	<name>Whispering Gallery</name>
+	<map>M09</map>
+	<description>Test Map</description>
+	<authors>Author Here</authors>
+	<players>6</players>
+	
+	<spawns>
+		<!-- team 1 -->
+		<spawn team="0" index="0" x="1000" z="2000" angle="0"/>
+		<spawn team="0" index="1" x="1000" z="2000" angle="0"/>
+		<spawn team="0" index="2" x="1000" z="2000" angle="0"/>
+		<!-- team 2 -->
+		<spawn team="1" index="0" x="1000" z="2000" angle="0"/>
+		<spawn team="1" index="1" x="1000" z="2000" angle="0"/>
+		<spawn team="1" index="2" x="1000" z="2000" angle="0"/>
+	</spawns>
+	
+	<resources>
+		<!-- type 0 = cus, type 1 = rus, type 2 = wreck (wreck needs testing) -->
+		<!-- team 1 -->
+		<resource x="1000" z="2200" type="0" amount="7500" collectors="2"/>
+	</resources>
+	
+	<artifacts>
+		<artifact x="1000" z="3000"/>
+	</artifacts>
+	
+	<ezs>
+		<!-- extraction zones -->
+		<!-- only tested 1 per team but the code suggests you can only have 1 at a time -->
+		<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
+		<ez team="0" x="1000" z="0" radius="1000"/>
+		<ez team="1" x="1000" z="0" radius="1000"/>
+	</ezs>
+	
+</dokmap>
