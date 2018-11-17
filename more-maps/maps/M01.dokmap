@@ -12,9 +12,9 @@
 	
 	<spawns>
 		<!-- team 1 -->
-		<spawn team="0" index="0" x="-840" z="2470" angle="0"/>
-		<spawn team="0" index="1" x="-840" z="2470" angle="0"/>
-		<spawn team="0" index="2" x="-840" z="2470" angle="0"/>
+		<spawn team="0" index="0" x="-840" z="2370" angle="90"/>
+		<spawn team="0" index="1" x="-840" z="2370" angle="90"/>
+		<spawn team="0" index="2" x="-840" z="2370" angle="90"/>
 		<!-- team 2 -->
 		<spawn team="1" index="0" x="1600" z="720" angle="0"/>
 		<spawn team="1" index="1" x="1600" z="720" angle="0"/>
@@ -24,9 +24,9 @@
 	<resources>
 		<!-- type 0 = cus, type 1 = rus -->
 		<!-- team 1 -->
-		<resource x="-540" z="2620" type="0" amount="7500" collectors="2"/>
-		<resource x="-540" z="2470" type="1" amount="3000" collectors="2"/>
-		<resource x="-540" z="2320" type="0" amount="7500" collectors="2"/>
+		<resource x="-540" z="2520" type="0" amount="7500" collectors="2"/>
+		<resource x="-540" z="2370" type="1" amount="3000" collectors="2"/>
+		<resource x="-540" z="2220" type="0" amount="7500" collectors="2"/>
 		
 		<resource x="-1140" z="2445" type="1" amount="4000" collectors="2"/>
 		<resource x="-1140" z="2295" type="0" amount="10500" collectors="2"/>

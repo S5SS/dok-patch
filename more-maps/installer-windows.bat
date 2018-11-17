@@ -29,7 +29,8 @@ if not exist "%dok_path%" (
 	echo You may have steamapps installed in a different location
 	set /p dok_path="Please paste your full path to your Deserts of Kharak folder: "
 	
-	if not exist "%dok_path%" goto path_loop
+	rem hack to make sure the directory selected is the dok folder
+	if not exist "%dok_path%/default.dokhotkeys" goto path_loop
 )
 
 echo The Deserts of Kharak path is "%dok_path%"
