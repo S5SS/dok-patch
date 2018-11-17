@@ -4,4 +4,4 @@
 - Begil (Map modder)
 - Katsushiro (Worked on installer)
 - Majiir (Subsystem developer)
-- SSSS (More Maps developer, Subsystem developer)
+- SSSS (More Maps developer, Subsystem (Map Mod edition) developer)
