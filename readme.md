@@ -1,6 +1,6 @@
 # Deserts of Kharak Modding Repository
 
-General usage repository for all things DoK modding.
+General usage repository for DoK modding.
 
 ## Links
 
